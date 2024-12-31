@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Greeting the person
         run: |
-            echo "hello ${Greeting} today is ${week_of_day}"
+            echo "hello $Greeting today is $week_of_day"
             echo "value $var_value"
             echo "value ${{env.var_value}}""
 

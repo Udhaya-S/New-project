@@ -1,4 +1,4 @@
-name: CI Workflow
+name: testing workflow
 
 on:
   push:
@@ -28,9 +28,11 @@ jobs:
         run: echo "hello windows"
 
   package:
-    needs: build-db
+    needs: [build-db,build-db]
     runs-on: windows-latest
 
     steps:
       - name: Package app
         run: echo "Packaging application"
+
+###hello

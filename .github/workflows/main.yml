@@ -9,20 +9,28 @@ on:
       - master
 
 jobs:
-  build:
+  build-app:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
+      - name: Run a one-line command
+        run: echo "hello eve"
 
-      - name: Install dependencies
-        run: npm install
+  build-db:
+    needs: build-app
+    runs-on: windows-latest
 
-      - name: Run tests
-        run: npm test
+    steps:
+      - name: Run on Windows
+        run: echo "hello windows"
+
+  package:
+    needs: build-db
+    runs-on: windows-latest
+
+    steps:
+      - name: Package app
+        run: echo "Packaging application"

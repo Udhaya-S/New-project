@@ -1,0 +1,15 @@
+name: workflow testing
+
+on:
+    workflow_dispatch:
+
+jobs:
+    mainjob:
+        runs-on: windows_latest
+        steps:
+            - name: screat key
+              run : |
+                   echo "MY_TEST_PASS IS : $MY_TEST_PASS"
+
+
+

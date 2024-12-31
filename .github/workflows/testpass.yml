@@ -5,7 +5,7 @@ on:
 
 jobs:
     mainjob:
-        runs-on: windows_latest
+        runs-on: ubuntu_latest
         steps:
             - name: screat key
               run : |

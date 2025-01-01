@@ -11,6 +11,8 @@ jobs:
               run : |
                    echo "MY_TEST_PASS IS : $MY_TEST_PASS"
                    echo "h"
+              env:
+                MY_TEST_PASS : ${{secrets.MY_TEST_PASS}}
 
 
 

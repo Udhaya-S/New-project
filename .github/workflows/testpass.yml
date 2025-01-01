@@ -5,11 +5,12 @@ on:
 
 jobs:
     mainjob:
-        runs-on: ubuntu_latest
+        runs-on: ubuntu-latest
         steps:
             - name: screat key
               run : |
                    echo "MY_TEST_PASS IS : $MY_TEST_PASS"
+
 
 
 

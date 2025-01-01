@@ -10,6 +10,7 @@ jobs:
             - name: screat key
               run : |
                    echo "MY_TEST_PASS IS : $MY_TEST_PASS"
+                   echo "h"
 
 
 
